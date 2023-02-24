@@ -67,11 +67,6 @@ a.linkedin:focus {
   box-sizing: border-box;
 }
 
-body {
-  padding-right: 10% !important;
-  padding-left: 10% !important;
-}
-
 #cuerpo {
   display: grid;
   grid-template: 1fr/1fr 155px;
