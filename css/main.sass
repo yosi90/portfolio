@@ -38,7 +38,7 @@ body
 
     z-index: 1
 
-    #pantallaExterior
+    #pantalla
         border-radius: 25px
         border: 5px solid rgb(214, 214, 214)
         box-shadow: 5px 5px 4px rgb(0, 0, 0)
@@ -47,25 +47,21 @@ body
 
         padding: 20px 15px
 
-        #pantalla
+        #inicio
             position: relative
 
             display: flex
             justify-content: center
             align-items: center
 
-            height: 100%
-
-            border-radius: 30px / 50%
-            box-shadow: inset 0 0 100px rgb(0, 0, 0)
-
-            // background-image: url(../media/img/ruido.jpg)
             background-image: url(../media/img/programming.gif)
             background-color: #BCCCFE
             background-repeat: no-repeat
             background-size: 100%
             background-position: center -45%
 
+            -webkit-animation: ruidoInicio 5s
+            animation: ruidoInicio 5s
 
             #presentacion 
                 display: inline-block
@@ -73,6 +69,9 @@ body
                 background-color: rgba(255, 255, 255, 0.9)
 
                 border-radius: 10px
+
+                -webkit-animation: ocultoInicio 4s
+                animation: ocultoInicio 4s
 
                 padding: 10px 20px
 
@@ -98,6 +97,9 @@ body
                 position: absolute
                 top: 10px
                 right: 65px
+
+                -webkit-animation: ocultoInicio 6s
+                animation: ocultoInicio 6s
 
                 #flecha
                     position: absolute
@@ -140,12 +142,103 @@ body
                         -webkit-animation-delay: .3s
                         animation-delay: .3s
 
+        #ruido
+            background-image: url(../media/img/ruido.jpg)
+
+        #apagado
+            display: flex
+
+            background-color: white
+            
+            div
+                @include canalBase
+
+                width: 100%
+
+                -webkit-animation: fundido .8s
+                animation: fundido .8s
+
+        #cv
+            background-image: url(../media/img/ruido.jpg)
+
+        #portfolio
+            background-image: url(../media/img/ruido.jpg)
+
+
     #contenedorMenu
+        display: flex
+        justify-content: center
+        align-items: flex-start
+
         border-top-left-radius: 8px
         border-bottom-left-radius: 8px
         box-shadow: inset 2px 2px 5px rgb(75, 75, 75)
 
         background: black url(../media/img/fondoBotonera.jpg)
+
+        padding: 10px
+
+        #menu
+            background-color: gray
+
+        #encender
+            position: relative
+
+            align-self: flex-end
+
+            width: 100%
+            height: 45px
+
+            border-radius: 10px
+            border: 2px solid black
+            box-shadow: inset 2px 2px 5px black
+
+            background-color: rgb(51, 51, 51)
+
+            #botonEncender
+                position: absolute
+                top: -5px
+                right: 10px
+
+                display: flex
+                justify-content: center
+                align-items: center
+
+                height: 50px
+                width: 50px
+
+                font-size: 28px
+                color: red
+
+                border-radius: 50%
+                border: 1px solid lightgray
+                box-shadow: 2px 1px 5px lightgray
+
+                background-color: gray
+
+                cursor: pointer
+
+                &:hover
+                    box-shadow: inset 0 0 5px lightgray
+
+                i
+                    display: flex
+                    justify-content: center
+                    align-items: center
+
+                    width: 40px
+                    height: 40px
+
+                    border-radius: 50%
+                    box-shadow: 2px 2px 5px black
+
+                    background-color: rgb(22, 22, 22)
+
+                    &:hover
+                        box-shadow: inset 0 0 5px black   
+
+.canal
+    @include canalBase
 
 #pie
     height: 37px
@@ -163,5 +256,11 @@ body
     li
         margin-top: -3px
         margin-right: 10px
+
+        .github
+            font-size: 28px
+            
+        .trello
+            font-size: 22px
 
 @import 'media'

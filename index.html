@@ -16,10 +16,10 @@
 
 <body class="container bg-dark py-5">
     <div id="cuerpo" class="row bg-dark pe-0 py-4 mb-2">
-        <div id="pantallaExterior">
-            <div id="pantalla">
+        <div id="pantalla">
+            <div id="inicio" class="canal actual">
                 <div id="presentacion">
-                    <h2>Hola, soy <span id="nombre">Antonio González</span><b class="superindice">Yosi</b></h2>
+                    <h2>¡Hola!, soy <span id="nombre">Antonio González</span><b class="superindice">Yosi</b></h2>
                     <br>
                     <h2 class="text-center">Y programar es mi juego.</h2>
                 </div>
@@ -27,9 +27,23 @@
                     <div id="flecha"><span></span><span></span><span></span></div><b>¡Cambia de canal!</b>
                 </div>
             </div>
+            <div id="apagado" class="canal justify-content-center align-items-center">
+                <div class="bg-black"></div>
+            </div>
+            <div id="cv" class="canal">
+
+            </div>
+            <div id="portfolio" class="canal">
+
+            </div>
         </div>
         <div id="contenedorMenu" class="bg-info">
-
+            <div id="menu"></div>
+            <div id="encender">
+                <div id="botonEncender">
+                    <i class="fa fa-power-off"></i>
+                </div>
+            </div>
         </div>
     </div>
     <div id="pie" class="row align-items-center bg-black mt-3 mx-5">
@@ -41,7 +55,11 @@
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
-                <li><a class="github" href="https://github.com/yosi90"><i class="fa fa-github"></i></a></li>
+                <li>
+                    <a class="github" href="https://github.com/yosi90">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
                 <li>
                     <a class="trello" href="https://trello.com/b/SQ4Nz93H/rol" target="_blank">
                         <i class="fa fa-trello"></i>
@@ -56,6 +74,7 @@
         </div>
     </div>
 </body>
+<script src="js/jquery.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 

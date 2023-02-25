@@ -21,7 +21,7 @@
   color: #818a91;
   font-size: 24px;
   display: inline-block;
-  line-height: 44px;
+  line-height: 43px;
   width: 44px;
   height: 44px;
   text-align: center;
@@ -89,6 +89,58 @@ a.github:focus {
     opacity: 0;
   }
 }
+@-webkit-keyframes fundido {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 5%;
+  }
+}
+@keyframes fundido {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 5%;
+  }
+}
+@-webkit-keyframes ruidoInicio {
+  from {
+    background-image: url(../media/img/noise.gif);
+    background-repeat: repeat;
+    background-position: 100% 100%;
+  }
+}
+@keyframes ruidoInicio {
+  from {
+    background-image: url(../media/img/noise.gif);
+    background-repeat: repeat;
+    background-position: 100% 100%;
+  }
+}
+@-webkit-keyframes ocultoInicio {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ocultoInicio {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -119,61 +171,64 @@ body {
   padding-left: 38px;
   z-index: 1;
 }
-#cuerpo #pantallaExterior {
+#cuerpo #pantalla {
   border-radius: 25px;
   border: 5px solid rgb(214, 214, 214);
   box-shadow: 5px 5px 4px rgb(0, 0, 0);
   background-color: black;
   padding: 20px 15px;
 }
-#cuerpo #pantallaExterior #pantalla {
+#cuerpo #pantalla #inicio {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  border-radius: 30px/50%;
-  box-shadow: inset 0 0 100px rgb(0, 0, 0);
   background-image: url(../media/img/programming.gif);
   background-color: #BCCCFE;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center -45%;
+  -webkit-animation: ruidoInicio 5s;
+  animation: ruidoInicio 5s;
 }
-#cuerpo #pantallaExterior #pantalla #presentacion {
+#cuerpo #pantalla #inicio #presentacion {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
+  -webkit-animation: ocultoInicio 4s;
+  animation: ocultoInicio 4s;
   padding: 10px 20px;
 }
-#cuerpo #pantallaExterior #pantalla #presentacion h2:nth-child(1) {
+#cuerpo #pantalla #inicio #presentacion h2:nth-child(1) {
   position: relative;
   display: inline-block;
   font-weight: 500;
 }
-#cuerpo #pantallaExterior #pantalla #presentacion h2:nth-child(1) #nombre {
+#cuerpo #pantalla #inicio #presentacion h2:nth-child(1) #nombre {
   color: red;
   font-size: 50px;
 }
-#cuerpo #pantallaExterior #pantalla #presentacion h2:nth-child(1) .superindice {
+#cuerpo #pantalla #inicio #presentacion h2:nth-child(1) .superindice {
   position: absolute;
   right: 0;
   top: -8px;
   color: rgb(201, 81, 81);
   font-size: 25px;
 }
-#cuerpo #pantallaExterior #pantalla #textoFlecha {
+#cuerpo #pantalla #inicio #textoFlecha {
   position: absolute;
   top: 10px;
   right: 65px;
+  -webkit-animation: ocultoInicio 6s;
+  animation: ocultoInicio 6s;
 }
-#cuerpo #pantallaExterior #pantalla #textoFlecha #flecha {
+#cuerpo #pantalla #inicio #textoFlecha #flecha {
   position: absolute;
   top: 60%;
   right: 5px;
   transform: rotate(-45deg);
 }
-#cuerpo #pantallaExterior #pantalla #textoFlecha #flecha span {
+#cuerpo #pantalla #inicio #textoFlecha #flecha span {
   position: absolute;
   top: 0px;
   left: 50%;
@@ -188,25 +243,102 @@ body {
   opacity: 0;
   margin-left: -12px;
 }
-#cuerpo #pantallaExterior #pantalla #textoFlecha #flecha span:nth-of-type(1) {
+#cuerpo #pantalla #inicio #textoFlecha #flecha span:nth-of-type(1) {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
-#cuerpo #pantallaExterior #pantalla #textoFlecha #flecha span:nth-of-type(2) {
+#cuerpo #pantalla #inicio #textoFlecha #flecha span:nth-of-type(2) {
   top: 16px;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 }
-#cuerpo #pantallaExterior #pantalla #textoFlecha #flecha span:nth-of-type(3) {
+#cuerpo #pantalla #inicio #textoFlecha #flecha span:nth-of-type(3) {
   top: 32px;
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
+#cuerpo #pantalla #ruido {
+  background-image: url(../media/img/ruido.jpg);
+}
+#cuerpo #pantalla #apagado {
+  display: flex;
+  background-color: white;
+}
+#cuerpo #pantalla #apagado div {
+  height: 100%;
+  border-radius: 30px/50%;
+  box-shadow: inset 0 0 100px rgb(0, 0, 0);
+  width: 100%;
+  -webkit-animation: fundido 0.8s;
+  animation: fundido 0.8s;
+}
+#cuerpo #pantalla #cv {
+  background-image: url(../media/img/ruido.jpg);
+}
+#cuerpo #pantalla #portfolio {
+  background-image: url(../media/img/ruido.jpg);
+}
 #cuerpo #contenedorMenu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   box-shadow: inset 2px 2px 5px rgb(75, 75, 75);
   background: black url(../media/img/fondoBotonera.jpg);
+  padding: 10px;
+}
+#cuerpo #contenedorMenu #menu {
+  background-color: gray;
+}
+#cuerpo #contenedorMenu #encender {
+  position: relative;
+  align-self: flex-end;
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: inset 2px 2px 5px black;
+  background-color: rgb(51, 51, 51);
+}
+#cuerpo #contenedorMenu #encender #botonEncender {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  font-size: 28px;
+  color: red;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  box-shadow: 2px 1px 5px lightgray;
+  background-color: gray;
+  cursor: pointer;
+}
+#cuerpo #contenedorMenu #encender #botonEncender:hover {
+  box-shadow: inset 0 0 5px lightgray;
+}
+#cuerpo #contenedorMenu #encender #botonEncender i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px black;
+  background-color: rgb(22, 22, 22);
+}
+#cuerpo #contenedorMenu #encender #botonEncender i:hover {
+  box-shadow: inset 0 0 5px black;
+}
+
+.canal {
+  height: 100%;
+  border-radius: 30px/50%;
+  box-shadow: inset 0 0 100px rgb(0, 0, 0);
 }
 
 #pie {
@@ -223,4 +355,10 @@ body {
 #pie li {
   margin-top: -3px;
   margin-right: 10px;
+}
+#pie li .github {
+  font-size: 28px;
+}
+#pie li .trello {
+  font-size: 22px;
 }/*# sourceMappingURL=main.css.map */
