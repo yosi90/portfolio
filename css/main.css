@@ -531,6 +531,7 @@ body #mesa #jarron {
   height: 37px;
   width: 100%;
   border-radius: 10px;
+  box-shadow: 15px -5px 0 rgb(36, 36, 36);
   z-index: 1;
 }
 #pie p {
