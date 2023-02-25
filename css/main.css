@@ -311,6 +311,26 @@ body {
   align-items: center;
   height: 100vh;
 }
+body #mesa {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6vw;
+  background-image: url(../media/img/mesa.jpg);
+}
+body #mesa #teclado {
+  position: absolute;
+  top: -10%;
+  left: 15px;
+  width: 15vw;
+}
+body #mesa #jarron {
+  position: absolute;
+  top: -250%;
+  right: 5px;
+  width: 15vw;
+}
 
 #cuerpo {
   display: grid;
@@ -321,7 +341,7 @@ body {
   width: 100%;
   border-radius: 50px;
   border: 10px solid rgb(214, 214, 214);
-  box-shadow: 30px 3px 0 rgb(165, 165, 165);
+  box-shadow: 35px -5px 0 rgb(165, 165, 165);
   background-image: url(../media/img/ebano.jpg);
   overflow: hidden;
   padding-left: 38px;
@@ -511,7 +531,7 @@ body {
   height: 37px;
   width: 100%;
   border-radius: 10px;
-  box-shadow: 6px 3px 0 rgb(165, 165, 165);
+  z-index: 1;
 }
 #pie p {
   font-weight: bolder;

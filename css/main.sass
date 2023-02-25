@@ -18,6 +18,30 @@ body
 
     height: 100vh
 
+    #mesa
+        position: fixed
+        left: 0
+        right: 0
+        bottom: 0
+
+        height: 6vw
+        
+        background-image: url(../media/img/mesa.jpg)
+
+        #teclado
+            position: absolute
+            top: -10%
+            left: 15px
+
+            width: 15vw
+
+        #jarron
+            position: absolute
+            top: -250%
+            right: 5px
+
+            width: 15vw
+
 #cuerpo
     display: grid
     grid-template: 1fr / 1fr 155px
@@ -29,7 +53,7 @@ body
 
     border-radius: 50px
     border: 10px solid rgb(214, 214, 214)
-    box-shadow: 30px 3px 0 rgb(165, 165, 165)
+    box-shadow: 35px -5px 0 rgb(165, 165, 165)
     background-image: url(../media/img/ebano.jpg)
 
     overflow: hidden
@@ -259,7 +283,8 @@ body
     width: 100%
 
     border-radius: 10px
-    box-shadow: 6px 3px 0 rgb(165, 165, 165)
+
+    z-index: 1
 
     p
         font-weight: bolder
