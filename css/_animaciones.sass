@@ -26,17 +26,50 @@
     to
         height: 5%
         
-@-webkit-keyframes ruidoInicio
-    from
+@-webkit-keyframes ruido
+    0%
+        opacity: 0
         background-image: url(../media/img/noise.gif)
         background-repeat: repeat
         background-position: 100% 100%
+    20%
+        opacity: 1
+        background-image: url(../media/img/noise.gif)
+        background-repeat: repeat
+        background-position: 100% 100%
+    30%
+        opacity: 1
+        background-image: url(../media/img/noise.gif)
+        background-repeat: repeat
+        background-position: 100% 100%
+    31%
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        opacity: 1
 
-@keyframes ruidoInicio
-    from
+@keyframes ruido
+    0%
+        opacity: 0
         background-image: url(../media/img/noise.gif)
         background-repeat: repeat
         background-position: 100% 100%
+    20%
+        opacity: 1
+    25%
+        opacity: 0.5
+    30%
+        opacity: 1
+        background-image: url(../media/img/noise.gif)
+        background-repeat: repeat
+        background-position: 100% 100%
+    31%
+        opacity: 0
+    50%
+        opacity: 1
+    100%
+        opacity: 1
         
 @-webkit-keyframes ocultoInicio
     0%
@@ -53,3 +86,81 @@
         opacity: 0
     100%
         opacity: 1
+        
+@-webkit-keyframes fps
+    0%
+        opacity: .07
+        top: 50%
+    5%
+        top: -20%
+    10%
+        top: 105%
+    15%
+        top: 30%
+    20%
+        top: -20%
+    25%
+        top: 70%
+    30%
+        top: 30%
+    35%
+        top: 60%
+    40%
+        top: 20%
+    45%
+        top: -20%
+    50%
+        top: 105%
+    55%
+        top: 50%
+    60%
+        top: -20%
+    65%
+        top: 105%
+    70%
+        top: 50%
+    75%
+        top: -20%
+        opacity: .07
+    100%
+        top: -20%
+        opacity: 0
+
+@keyframes fps
+    0%
+        opacity: .07
+        top: 50%
+    5%
+        top: -20%
+    10%
+        top: 105%
+    15%
+        top: 30%
+    20%
+        top: -20%
+    25%
+        top: 70%
+    30%
+        top: 30%
+    35%
+        top: 60%
+    40%
+        top: 20%
+    45%
+        top: -20%
+    50%
+        top: 105%
+    55%
+        top: 50%
+    60%
+        top: -20%
+    65%
+        top: 105%
+    70%
+        top: 50%
+    75%
+        top: -20%
+        opacity: .07
+    100%
+        top: -20%
+        opacity: 0

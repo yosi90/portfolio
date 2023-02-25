@@ -105,18 +105,62 @@ a.github:focus {
     height: 5%;
   }
 }
-@-webkit-keyframes ruidoInicio {
-  from {
+@-webkit-keyframes ruido {
+  0% {
+    opacity: 0;
     background-image: url(../media/img/noise.gif);
     background-repeat: repeat;
     background-position: 100% 100%;
   }
-}
-@keyframes ruidoInicio {
-  from {
+  20% {
+    opacity: 1;
     background-image: url(../media/img/noise.gif);
     background-repeat: repeat;
     background-position: 100% 100%;
+  }
+  30% {
+    opacity: 1;
+    background-image: url(../media/img/noise.gif);
+    background-repeat: repeat;
+    background-position: 100% 100%;
+  }
+  31% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ruido {
+  0% {
+    opacity: 0;
+    background-image: url(../media/img/noise.gif);
+    background-repeat: repeat;
+    background-position: 100% 100%;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+    background-image: url(../media/img/noise.gif);
+    background-repeat: repeat;
+    background-position: 100% 100%;
+  }
+  31% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @-webkit-keyframes ocultoInicio {
@@ -139,6 +183,118 @@ a.github:focus {
   }
   100% {
     opacity: 1;
+  }
+}
+@-webkit-keyframes fps {
+  0% {
+    opacity: 0.07;
+    top: 50%;
+  }
+  5% {
+    top: -20%;
+  }
+  10% {
+    top: 105%;
+  }
+  15% {
+    top: 30%;
+  }
+  20% {
+    top: -20%;
+  }
+  25% {
+    top: 70%;
+  }
+  30% {
+    top: 30%;
+  }
+  35% {
+    top: 60%;
+  }
+  40% {
+    top: 20%;
+  }
+  45% {
+    top: -20%;
+  }
+  50% {
+    top: 105%;
+  }
+  55% {
+    top: 50%;
+  }
+  60% {
+    top: -20%;
+  }
+  65% {
+    top: 105%;
+  }
+  70% {
+    top: 50%;
+  }
+  75% {
+    top: -20%;
+    opacity: 0.07;
+  }
+  100% {
+    top: -20%;
+    opacity: 0;
+  }
+}
+@keyframes fps {
+  0% {
+    opacity: 0.07;
+    top: 50%;
+  }
+  5% {
+    top: -20%;
+  }
+  10% {
+    top: 105%;
+  }
+  15% {
+    top: 30%;
+  }
+  20% {
+    top: -20%;
+  }
+  25% {
+    top: 70%;
+  }
+  30% {
+    top: 30%;
+  }
+  35% {
+    top: 60%;
+  }
+  40% {
+    top: 20%;
+  }
+  45% {
+    top: -20%;
+  }
+  50% {
+    top: 105%;
+  }
+  55% {
+    top: 50%;
+  }
+  60% {
+    top: -20%;
+  }
+  65% {
+    top: 105%;
+  }
+  70% {
+    top: 50%;
+  }
+  75% {
+    top: -20%;
+    opacity: 0.07;
+  }
+  100% {
+    top: -20%;
+    opacity: 0;
   }
 }
 * {
@@ -188,8 +344,8 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center -45%;
-  -webkit-animation: ruidoInicio 5s;
-  animation: ruidoInicio 5s;
+  -webkit-animation: ruido 5s;
+  animation: ruido 5s;
 }
 #cuerpo #pantalla #inicio #presentacion {
   display: inline-block;
@@ -257,6 +413,16 @@ body {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
+#cuerpo #pantalla #inicio #frames {
+  position: absolute;
+  width: 100%;
+  height: 180px;
+  border-radius: 20%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 64%, rgba(0, 0, 0, 0) 79%);
+  transform: rotate(-2deg);
+  -webkit-animation: ocultoInicio 6s, fps 8s infinite;
+  animation: ocultoInicio 6s, fps 8s infinite;
+}
 #cuerpo #pantalla #ruido {
   background-image: url(../media/img/ruido.jpg);
 }
@@ -314,7 +480,7 @@ body {
   color: red;
   border-radius: 50%;
   border: 1px solid lightgray;
-  box-shadow: 2px 1px 5px lightgray;
+  box-shadow: 3px 0.4px lightgray;
   background-color: gray;
   cursor: pointer;
 }
