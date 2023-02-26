@@ -9,12 +9,11 @@
     <meta name="keywords" content="curriculum, vitae, aptitudes, html, css, javascript, c#, programacion">
     <title>Yosiftware - Programing4Fun</title>
     <link rel="icon" type="image/icon" href="media/img/logo2/faviconGrandeSF.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="container bg-dark py-5">
+<body class="container bg-dark py-5" oncontextmenu="return false;">
     <div id="mesa">
         <img id="teclado" src="media/img/teclado.png" alt="">
         <img id="jarron" src="media/img/jarrón.png" alt="">
@@ -43,7 +42,24 @@
             </div>
         </div>
         <div id="contenedorMenu" class="bg-info">
-            <div id="menu"></div>
+            <div id="menu">
+                <div class="dial">
+                    <div class="ancha"></div>
+                    <div class="ancha"></div>
+                    <div class="estrecha"></div>
+                    <div class="estrecha"></div>
+                    <div id="cambiaCanal" class="selector"></div>
+                </div>
+                <div class="dial">
+                    <div class="ancha"></div>
+                    <div class="ancha"></div>
+                    <div class="estrecha"></div>
+                    <div class="estrecha"></div>
+                    <div id="cambiaVolumen" class="selector">
+                        <i id="volumen" class="fa-solid fa-volume-low"></i>
+                    </div>
+                </div>
+            </div>
             <div id="encender">
                 <div id="botonEncender">
                     <i class="fa fa-power-off"></i>
@@ -62,17 +78,17 @@
             <ul class="social-icons">
                 <li>
                     <a class="github" href="https://github.com/yosi90">
-                        <i class="fa fa-github"></i>
+                        <i class="fa-brands fa-github"></i>
                     </a>
                 </li>
                 <li>
                     <a class="trello" href="https://trello.com/b/SQ4Nz93H/rol" target="_blank">
-                        <i class="fa fa-trello"></i>
+                        <i class="fa-brands fa-trello"></i>
                     </a>
                 </li>
                 <li>
                     <a class="linkedin" href="https://www.linkedin.com/in/AntonioJGonzález" target="_blank">
-                        <i class="fa fa-linkedin"></i>
+                        <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </li>
             </ul>

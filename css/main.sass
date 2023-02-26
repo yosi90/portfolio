@@ -11,10 +11,9 @@
     font-family: 'Orbitron', sans-serif
 
 body
-    display: flex
+    @include flexCenter
+
     flex-flow: row wrap
-    justify-content: center
-    align-items: center
 
     height: 100vh
 
@@ -122,8 +121,14 @@ body
                 top: 10px
                 right: 65px
 
+                border-radius: 10px
+                
+                background-color: rgba(0, 0, 0, .3)
+
                 -webkit-animation: ocultoInicio 6s
                 animation: ocultoInicio 6s
+
+                padding: 2px 7px 2px 7px
 
                 #flecha
                     position: absolute
@@ -193,8 +198,8 @@ body
 
                 width: 100%
 
-                -webkit-animation: fundido .8s
-                animation: fundido .8s
+                -webkit-animation: fundido .6s ease-out
+                animation: fundido .6s ease-out
 
         #cv
             background-image: url(../media/img/ruido.jpg)
@@ -205,6 +210,7 @@ body
 
     #contenedorMenu
         display: flex
+        flex-flow: row wrap
         justify-content: center
         align-items: flex-start
 
@@ -214,10 +220,77 @@ body
 
         background: black url(../media/img/fondoBotonera.jpg)
 
-        padding: 10px
+        padding: 0
 
         #menu
+            @include flexCenter
+
+            flex-flow: row wrap
+
+            width: 100%
+            height: 300px
+
+            border-radius: 10px
+
             background-color: gray
+
+            margin: 3px 3px 0 5px
+
+            .dial
+                position: relative
+
+                @include flexCenter
+                flex-flow: column nowrap
+
+                width: 130px
+                height: 130px
+
+                border-radius: 50%
+                box-shadow: inset 0 0 10px black
+
+                background-color: rgb(34, 34, 34)
+
+                div:not(#selector)
+                    background-color: rgb(228, 209, 101)
+                    box-shadow: inset 0 0 3px rgb(85, 85, 85)
+
+                .ancha
+                    width: 100%
+                    height: 3px
+
+                .estrecha
+                    width: 90%
+                    height: 1.5px
+
+                div:nth-child(1)
+                    transform: rotate(90deg) translateX(3px)
+
+                div:nth-child(2)
+                    transform: translateY(2px)
+
+                div:nth-child(3)
+                    transform: rotate(45deg)
+
+                div:nth-child(4)
+                    transform: rotate(-45deg) translateX(2px)
+
+                .selector
+                    position: absolute
+
+                    @include flexCenter
+
+                    width: 100px
+                    height: 100px
+
+                    font-size: 40px
+
+                    border-radius: 50%
+                    box-shadow: 2px 2px 10px black
+
+                    background: rgb(70,70,70)
+                    background: radial-gradient(circle, #2b2b2b 50%, rgba(0,0,0,1) 75%)
+
+                    cursor: pointer
 
         #encender
             position: relative
@@ -233,6 +306,8 @@ body
 
             background-color: rgb(51, 51, 51)
 
+            margin: 10px
+
             #botonEncender
                 position: absolute
                 top: -5px
@@ -246,7 +321,7 @@ body
                 width: 50px
 
                 font-size: 28px
-                color: red
+                color: rgb(231, 73, 73)
 
                 border-radius: 50%
                 border: 1px solid lightgray
@@ -260,9 +335,7 @@ body
                     box-shadow: inset 0 0 5px lightgray
 
                 i
-                    display: flex
-                    justify-content: center
-                    align-items: center
+                    @include flexCenter
 
                     width: 40px
                     height: 40px
