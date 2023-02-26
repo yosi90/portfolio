@@ -114,9 +114,9 @@ a.github:focus {
   }
   20% {
     opacity: 1;
-    background-image: url(../media/img/noise.gif);
-    background-repeat: repeat;
-    background-position: 100% 100%;
+  }
+  25% {
+    opacity: 0.5;
   }
   30% {
     opacity: 1;
@@ -305,6 +305,7 @@ a.github:focus {
 }
 
 body {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,7 +318,7 @@ body #mesa {
   right: 0;
   bottom: 0;
   height: 6vw;
-  background-image: url(../media/img/mesa.jpg);
+  background-image: url(../media/img/mesa.webp);
 }
 body #mesa #teclado {
   position: absolute;
@@ -332,6 +333,21 @@ body #mesa #jarron {
   width: 15vw;
 }
 
+#fondoTv {
+  position: absolute;
+  top: 55px;
+  right: -50px;
+  width: 100%;
+  height: calc(100vh - 6.5rem - 75px);
+  max-height: 770px;
+  border-top-right-radius: 210px;
+  border-bottom-right-radius: 90px 300px;
+  border: 7px solid rgb(214, 214, 214);
+  background: rgb(250, 250, 250);
+  background: linear-gradient(90deg, rgb(250, 250, 250) 90%, rgb(165, 165, 165) 98%);
+  transform: rotate(-0.5deg);
+}
+
 #cuerpo {
   display: grid;
   grid-template: 1fr/1fr 155px;
@@ -341,8 +357,7 @@ body #mesa #jarron {
   width: 100%;
   border-radius: 50px;
   border: 10px solid rgb(214, 214, 214);
-  box-shadow: 35px -5px 0 rgb(165, 165, 165);
-  background-image: url(../media/img/ebano.jpg);
+  background-image: url(../media/img/ebano.webp);
   overflow: hidden;
   padding-left: 38px;
   z-index: 1;
@@ -446,9 +461,6 @@ body #mesa #jarron {
   -webkit-animation: ocultoInicio 6s, fps 8s infinite;
   animation: ocultoInicio 6s, fps 8s infinite;
 }
-#cuerpo #pantalla #ruido {
-  background-image: url(../media/img/ruido.jpg);
-}
 #cuerpo #pantalla #apagado {
   display: flex;
   background-color: white;
@@ -475,7 +487,7 @@ body #mesa #jarron {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   box-shadow: inset 2px 2px 5px rgb(75, 75, 75);
-  background: black url(../media/img/fondoBotonera.jpg);
+  background: black url(../media/img/fondoBotonera.webp);
   padding: 0;
 }
 #cuerpo #contenedorMenu #menu {

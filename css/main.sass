@@ -11,6 +11,7 @@
     font-family: 'Orbitron', sans-serif
 
 body
+    position: relative
     @include flexCenter
 
     flex-flow: row wrap
@@ -25,7 +26,7 @@ body
 
         height: 6vw
         
-        background-image: url(../media/img/mesa.jpg)
+        background-image: url(../media/img/mesa.webp)
 
         #teclado
             position: absolute
@@ -41,6 +42,24 @@ body
 
             width: 15vw
 
+#fondoTv
+    position: absolute
+    top: 55px
+    right: -50px
+
+    width: 100%
+    height: calc( 100vh - 6.5rem - 75px )
+    max-height: 770px
+
+    border-top-right-radius: 210px
+    border-bottom-right-radius: 90px 300px
+    border: 7px solid rgb(214, 214, 214)
+
+    background: rgb(250,250,250)
+    background: linear-gradient(90deg, rgba(250,250,250,1) 90%, rgba(165,165,165,1) 98%)
+
+    transform: rotate(-.5deg)
+
 #cuerpo
     display: grid
     grid-template: 1fr / 1fr 155px
@@ -52,8 +71,7 @@ body
 
     border-radius: 50px
     border: 10px solid rgb(214, 214, 214)
-    box-shadow: 35px -5px 0 rgb(165, 165, 165)
-    background-image: url(../media/img/ebano.jpg)
+    background-image: url(../media/img/ebano.webp)
 
     overflow: hidden
 
@@ -185,9 +203,6 @@ body
                 -webkit-animation: ocultoInicio 6s, fps 8s infinite
                 animation: ocultoInicio 6s, fps 8s infinite
 
-        #ruido
-            background-image: url(../media/img/ruido.jpg)
-
         #apagado
             display: flex
 
@@ -218,7 +233,7 @@ body
         border-bottom-left-radius: 8px
         box-shadow: inset 2px 2px 5px rgb(75, 75, 75)
 
-        background: black url(../media/img/fondoBotonera.jpg)
+        background: black url(../media/img/fondoBotonera.webp)
 
         padding: 0
 
