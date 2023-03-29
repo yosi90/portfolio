@@ -347,7 +347,7 @@ body #mesa #jarron {
   max-height: 750px;
   border-top-right-radius: 210px;
   border-bottom-right-radius: 90px 300px;
-  border: 7px solid rgb(214, 214, 214);
+  border: 3px solid rgb(214, 214, 214);
   background: rgb(250, 250, 250);
   background: linear-gradient(90deg, rgb(250, 250, 250) 90%, rgb(165, 165, 165) 98%);
   transform: rotate(-0.5deg);
@@ -361,7 +361,7 @@ body #mesa #jarron {
   max-height: 770px;
   width: 100%;
   border-radius: 50px;
-  border: 10px solid rgb(214, 214, 214);
+  border: 7px double rgb(214, 214, 214);
   background-image: url(../media/img/ebano.webp);
   overflow: hidden;
   padding-left: 38px;
@@ -369,7 +369,7 @@ body #mesa #jarron {
 }
 #cuerpo #pantalla {
   border-radius: 25px;
-  border: 5px solid rgb(214, 214, 214);
+  border: 5px double rgb(192, 192, 192);
   box-shadow: 0 0 10px rgb(0, 0, 0);
   background-color: black;
   padding: 20px 15px;
@@ -382,8 +382,8 @@ body #mesa #jarron {
   background-image: url(../media/img/programming.gif);
   background-color: #BCCCFE;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center -45%;
+  background-size: 90%;
+  background-position: center -15%;
   -webkit-animation: ruido 5s;
   animation: ruido 5s;
 }
@@ -394,6 +394,7 @@ body #mesa #jarron {
   -webkit-animation: ocultoInicio 4s;
   animation: ocultoInicio 4s;
   padding: 10px 20px;
+  margin-bottom: 120px;
 }
 #cuerpo #pantalla #inicio #presentacion h2:nth-child(1) {
   position: relative;
