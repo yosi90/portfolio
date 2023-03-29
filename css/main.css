@@ -311,6 +311,8 @@ body {
   align-items: center;
   flex-flow: row wrap;
   height: 100vh;
+  background-image: url(../media/img/fondo.jpg);
+  background-size: 100% 20%;
 }
 body #mesa {
   position: fixed;
@@ -323,23 +325,26 @@ body #mesa {
 body #mesa #teclado {
   position: absolute;
   top: -10%;
-  left: 15px;
+  right: 15px;
   width: 15vw;
+  transform: scaleX(-1);
 }
 body #mesa #jarron {
   position: absolute;
   top: -250%;
-  right: 5px;
+  left: 5px;
   width: 15vw;
+  transform: scaleX(-1);
+  z-index: 2;
 }
 
 #fondoTv {
   position: absolute;
-  top: 55px;
-  right: -50px;
-  width: 100%;
+  top: 60px;
+  right: -10px;
+  width: 90%;
   height: calc(100vh - 6.5rem - 75px);
-  max-height: 770px;
+  max-height: 750px;
   border-top-right-radius: 210px;
   border-bottom-right-radius: 90px 300px;
   border: 7px solid rgb(214, 214, 214);
@@ -365,7 +370,7 @@ body #mesa #jarron {
 #cuerpo #pantalla {
   border-radius: 25px;
   border: 5px solid rgb(214, 214, 214);
-  box-shadow: 5px 5px 4px rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgb(0, 0, 0);
   background-color: black;
   padding: 20px 15px;
 }
@@ -516,6 +521,7 @@ body #mesa #jarron {
 #cuerpo #contenedorMenu #menu .dial div:not(#selector) {
   background-color: rgb(228, 209, 101);
   box-shadow: inset 0 0 3px rgb(85, 85, 85);
+  border-radius: 50px;
 }
 #cuerpo #contenedorMenu #menu .dial .ancha {
   width: 100%;

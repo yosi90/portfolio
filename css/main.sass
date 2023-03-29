@@ -12,11 +12,14 @@
 
 body
     position: relative
-    @include flexCenter
 
+    @include flexCenter
     flex-flow: row wrap
 
     height: 100vh
+
+    background-image: url(../media/img/fondo.jpg)
+    background-size: 100% 20%
 
     #mesa
         position: fixed
@@ -25,31 +28,37 @@ body
         bottom: 0
 
         height: 6vw
-        
+
         background-image: url(../media/img/mesa.webp)
 
         #teclado
             position: absolute
             top: -10%
-            left: 15px
+            right: 15px
 
             width: 15vw
+
+            transform: scaleX(-1)
 
         #jarron
             position: absolute
             top: -250%
-            right: 5px
+            left: 5px
 
             width: 15vw
 
+            transform: scaleX(-1)
+
+            z-index: 2
+
 #fondoTv
     position: absolute
-    top: 55px
-    right: -50px
+    top: 60px
+    right: -10px
 
-    width: 100%
+    width: 90%
     height: calc( 100vh - 6.5rem - 75px )
-    max-height: 770px
+    max-height: 750px
 
     border-top-right-radius: 210px
     border-bottom-right-radius: 90px 300px
@@ -82,7 +91,7 @@ body
     #pantalla
         border-radius: 25px
         border: 5px solid rgb(214, 214, 214)
-        box-shadow: 5px 5px 4px rgb(0, 0, 0)
+        box-shadow: 0 0 10px rgb(0, 0, 0)
 
         background-color: black
 
@@ -104,7 +113,7 @@ body
             -webkit-animation: ruido 5s
             animation: ruido 5s
 
-            #presentacion 
+            #presentacion
                 display: inline-block
 
                 background-color: rgba(255, 255, 255, 0.9)
@@ -122,11 +131,11 @@ body
                     display: inline-block
 
                     font-weight: 500
-                    
+
                     #nombre
                         color: red
                         font-size: 50px
-                    
+
                     .superindice
                         position: absolute
                         right: 0
@@ -140,7 +149,7 @@ body
                 right: 65px
 
                 border-radius: 10px
-                
+
                 background-color: rgba(0, 0, 0, .3)
 
                 -webkit-animation: ocultoInicio 6s
@@ -162,7 +171,7 @@ body
 
                         width: 24px
                         height: 24px
-                        
+
                         border-left: 4px solid red
                         border-bottom: 4px solid red
 
@@ -188,7 +197,7 @@ body
                         top: 32px
                         -webkit-animation-delay: .3s
                         animation-delay: .3s
-            
+
             #frames
                 position: absolute
 
@@ -199,7 +208,7 @@ body
                 background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 64%, rgba(0,0,0,0) 79%)
 
                 transform: rotate(-2deg)
-                
+
                 -webkit-animation: ocultoInicio 6s, fps 8s infinite
                 animation: ocultoInicio 6s, fps 8s infinite
 
@@ -207,7 +216,7 @@ body
             display: flex
 
             background-color: white
-            
+
             div
                 @include canalBase
 
@@ -221,7 +230,6 @@ body
 
         #portfolio
             background-image: url(../media/img/ruido.jpg)
-
 
     #contenedorMenu
         display: flex
@@ -268,6 +276,7 @@ body
                 div:not(#selector)
                     background-color: rgb(228, 209, 101)
                     box-shadow: inset 0 0 3px rgb(85, 85, 85)
+                    border-radius: 50px
 
                 .ancha
                     width: 100%
@@ -361,7 +370,7 @@ body
                     background-color: rgb(22, 22, 22)
 
                     &:hover
-                        box-shadow: inset 0 0 5px black   
+                        box-shadow: inset 0 0 5px black
 
 .canal
     @include canalBase
@@ -388,7 +397,7 @@ body
 
         .github
             font-size: 28px
-            
+
         .trello
             font-size: 22px
 
