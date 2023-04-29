@@ -9,94 +9,99 @@
     <meta name="keywords" content="curriculum, vitae, aptitudes, html, css, javascript, c#, programacion">
     <title>Yosiftware - Programing4Fun</title>
     <link rel="icon" type="image/icon" href="media/img/logo2/faviconGrandeSF.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="container bg-dark py-5" oncontextmenu="return false;">
-    <div id="mesa">
-        <img id="teclado" src="media/img/teclado.webp" alt="">
-        <img id="jarron" src="media/img/jarrón.png" alt="">
-    </div>
-    <div id="fondoTv"></div>
-    <div id="cuerpo" class="row bg-dark pe-0 py-4 mx-5 mb-2">
-        <div id="pantalla" class="overflow-hidden">
-            <div id="inicio" class="canal actual">
-                <div id="presentacion">
-                    <h2>¡Hola!, soy <span id="nombre">Antonio González</span><b class="superindice">Yosi</b></h2>
-                    <br>
-                    <h2 class="text-center">Y programar es mi juego.</h2>
-                </div>
-                <div id="textoFlecha" class="d-inline-block text-danger">
-                    <div id="flecha"><span></span><span></span><span></span></div><b>¡Cambia de canal!</b>
-                </div>
-                <div id="frames"></div>
-            </div>
-            <div id="apagado" class="canal justify-content-center align-items-center">
-                <div class="bg-black"></div>
-            </div>
-            <div id="cv" class="canal">
+<body oncontextmenu="return false;">
+    <div class="container">
+        <div class="row">
+            <div id="cuerpo" class="bg-dark pe-0 py-4 mx-5">
+                <div id="pantalla" class="overflow-hidden">
+                    <div id="inicio" class="canal actual">
+                        <div id="presentacion">
+                            <h2>¡Hola!, soy <span id="nombre">Antonio González</span></h2>
+                            <br>
+                            <h2 class="text-center">Y programar es mi juego.</h2>
+                        </div>
+                        <div id="textoFlecha" class="d-inline-block">
+                            <div id="flecha"><span></span><span></span><span></span></div><b>¡Cambia de canal!</b>
+                        </div>
+                        <div id="frames"></div>
+                    </div>
+                    <div id="apagado" class="canal justify-content-center align-items-center">
+                        <div class="bg-black"></div>
+                    </div>
+                    <div id="cv" class="canal">
 
-            </div>
-            <div id="portfolio" class="canal">
+                    </div>
+                    <div id="portfolio" class="canal">
 
-            </div>
-        </div>
-        <div id="contenedorMenu" class="bg-info">
-            <div id="menu">
-                <div class="dial">
-                    <div class="ancha"></div>
-                    <div class="ancha"></div>
-                    <div class="estrecha"></div>
-                    <div class="estrecha"></div>
-                    <div id="cambiaCanal" class="selector">
-                        
                     </div>
                 </div>
-                <div class="dial">
-                    <div class="ancha"></div>
-                    <div class="ancha"></div>
-                    <div class="estrecha"></div>
-                    <div class="estrecha"></div>
-                    <div id="cambiaVolumen" class="selector">
-                        <i id="volumen" class="fa-solid fa-volume-low"></i>
+                <div id="contenedorMenu" class="bg-info">
+                    <div id="menu">
+                        <div class="dial">
+                            <div class="ancha"></div>
+                            <div class="ancha"></div>
+                            <div class="estrecha"></div>
+                            <div class="estrecha"></div>
+                            <div id="cambiaCanal" class="selector">
+
+                            </div>
+                        </div>
+                        <div class="dial">
+                            <div class="ancha"></div>
+                            <div class="ancha"></div>
+                            <div class="estrecha"></div>
+                            <div class="estrecha"></div>
+                            <div id="cambiaVolumen" class="selector">
+                                <i id="volumen" class="fa-solid fa-volume-low"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="encender">
+                        <div id="botonEncender">
+                            <i class="fa fa-power-off"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="encender">
-                <div id="botonEncender">
-                    <i class="fa fa-power-off"></i>
+        </div>
+        <div class="row">
+            <div id="pie" class="d-flex align-items-center bg-black">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p id="copy" class="ms-2">
+                        Copyright &copy; 2176 todos los derechos reservados por
+                        <a href="https://yosiftware.es">Yosiftware S.A.</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li>
+                            <a class="github" href="https://github.com/yosi90" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="trello" href="https://trello.com/b/SQ4Nz93H/rol" target="_blank">
+                                <i class="fa-brands fa-trello"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="linkedin" href="https://www.linkedin.com/in/AntonioJGonzález" target="_blank">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div id="pie" class="row align-items-center bg-black mt-3 mx-5">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-            <p id="copy" class="ms-2">
-                Copyright &copy; 2176 todos los derechos reservados por
-                <a href="#">Yosiftware S.A.</a>
-            </p>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-                <li>
-                    <a class="github" href="https://github.com/yosi90" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="trello" href="https://trello.com/b/SQ4Nz93H/rol" target="_blank">
-                        <i class="fa-brands fa-trello"></i>
-                    </a>
-                </li>
-                <li>
-                    <a class="linkedin" href="https://www.linkedin.com/in/AntonioJGonzález" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <div id="fondoTv" class="d-none"></div>
 </body>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>

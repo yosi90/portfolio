@@ -1,6 +1,6 @@
 .social-icons 
     display: flex
-    justify-content: end
+    justify-content: flex-end
     align-items: center
 
     list-style: none
@@ -13,13 +13,16 @@
         font-size: 24px
         display: inline-block
         line-height: 43px
-        width: 44px
-        height: 44px
+        width: 42px
+        height: 42px
         text-align: center
         border-radius: 100%
         -webkit-transition: all .2s linear
         -o-transition: all .2s linear
         transition: all .2s linear
+
+        &:hover
+            transform: scale(120%)
 
 .social-icons a:active,
 .social-icons a:focus,
@@ -50,3 +53,45 @@ a.github:hover,
 a.github:active,
 a.github:focus
     background-color: black
+
+@media screen and (max-width: 992px)
+    #copy
+        font-size: 11px
+
+    #pie 
+        height: 30px
+
+        .social-icons 
+            a
+                width: 38px !important
+                height: 38px !important
+
+                &::before
+                    margin-bottom: 20px
+
+            .github
+                font-size: 24px !important
+
+@media screen and (max-width: 767px)
+    #copy
+        font-size: 6px
+
+    #pie 
+        height: 20px
+
+        border-radius: 6px
+
+        margin-bottom: 20px
+
+        .social-icons 
+            a
+                width: 28px !important
+                height: 28px !important
+
+                font-size: 15px !important
+
+                &::before
+                    margin-bottom: 20px
+
+            .github
+                font-size: 17px !important

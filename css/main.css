@@ -11,7 +11,7 @@
 
 .social-icons {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   list-style: none;
   margin-bottom: 0;
@@ -22,13 +22,16 @@
   font-size: 24px;
   display: inline-block;
   line-height: 43px;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   text-align: center;
   border-radius: 100%;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+}
+.social-icons a:hover {
+  transform: scale(120%);
 }
 
 .social-icons a:active,
@@ -67,6 +70,45 @@ a.github:focus {
   background-color: black;
 }
 
+@media screen and (max-width: 992px) {
+  #copy {
+    font-size: 11px;
+  }
+  #pie {
+    height: 30px;
+  }
+  #pie .social-icons a {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  #pie .social-icons a::before {
+    margin-bottom: 20px;
+  }
+  #pie .social-icons .github {
+    font-size: 24px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #copy {
+    font-size: 6px;
+  }
+  #pie {
+    height: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  #pie .social-icons a {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 15px !important;
+  }
+  #pie .social-icons a::before {
+    margin-bottom: 20px;
+  }
+  #pie .social-icons .github {
+    font-size: 17px !important;
+  }
+}
 @-webkit-keyframes sdb07 {
   0% {
     opacity: 0;
@@ -305,37 +347,31 @@ a.github:focus {
 }
 
 body {
+  background-image: url(../media/img/fondo.jpg);
+  background-size: 100% 20%;
+}
+body .container {
+  height: 100vh;
+}
+body .container .row {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
-  height: 100vh;
-  background-image: url(../media/img/fondo.jpg);
-  background-size: 100% 20%;
 }
-body #mesa {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 6vw;
+body .container div.row:first-of-type {
+  align-items: flex-end;
+  height: 87vh;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+body .container div.row:last-of-type {
+  height: 13vh;
   background-image: url(../media/img/mesa.webp);
-}
-body #mesa #teclado {
-  position: absolute;
-  top: -10%;
-  right: 15px;
-  width: 15vw;
-  transform: scaleX(-1);
-}
-body #mesa #jarron {
-  position: absolute;
-  top: -250%;
-  left: 5px;
-  width: 15vw;
-  transform: scaleX(-1);
-  z-index: 2;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 
 #fondoTv {
@@ -358,7 +394,7 @@ body #mesa #jarron {
   grid-template: 1fr/1fr 155px;
   gap: 18px;
   height: calc(100vh - 6.5rem - 45px);
-  max-height: 770px;
+  max-height: 616px;
   width: 100%;
   border-radius: 50px;
   border: 7px double rgb(214, 214, 214);
@@ -383,18 +419,21 @@ body #mesa #jarron {
   background-color: #BCCCFE;
   background-repeat: no-repeat;
   background-size: 90%;
-  background-position: center -15%;
+  background-position: center -65%;
   -webkit-animation: ruido 5s;
   animation: ruido 5s;
 }
 #cuerpo #pantalla #inicio #presentacion {
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   -webkit-animation: ocultoInicio 4s;
   animation: ocultoInicio 4s;
   padding: 10px 20px;
-  margin-bottom: 120px;
+  margin-bottom: 150px;
+}
+#cuerpo #pantalla #inicio #presentacion h2 {
+  color: white;
+  text-shadow: 1px 1px black, -1px -1px black;
 }
 #cuerpo #pantalla #inicio #presentacion h2:nth-child(1) {
   position: relative;
@@ -404,20 +443,12 @@ body #mesa #jarron {
 #cuerpo #pantalla #inicio #presentacion h2:nth-child(1) #nombre {
   color: red;
   font-size: 50px;
-}
-#cuerpo #pantalla #inicio #presentacion h2:nth-child(1) .superindice {
-  position: absolute;
-  right: 0;
-  top: -8px;
-  color: rgb(201, 81, 81);
-  font-size: 25px;
+  text-shadow: 1px 0 white;
 }
 #cuerpo #pantalla #inicio #textoFlecha {
   position: absolute;
   top: 10px;
-  right: 65px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  right: 70px;
   -webkit-animation: ocultoInicio 6s;
   animation: ocultoInicio 6s;
   padding: 2px 7px 2px 7px;
@@ -426,7 +457,7 @@ body #mesa #jarron {
   position: absolute;
   top: 60%;
   right: 5px;
-  transform: rotate(-45deg);
+  transform: rotate(-65deg);
 }
 #cuerpo #pantalla #inicio #textoFlecha #flecha span {
   position: absolute;
@@ -610,13 +641,15 @@ body #mesa #jarron {
 }
 
 #pie {
-  height: 37px;
+  height: 32px;
   width: 100%;
   border-radius: 10px;
   box-shadow: 15px -5px 0 rgb(36, 36, 36);
+  transition: 1s;
   z-index: 1;
 }
 #pie p {
+  font-size: 11px;
   font-weight: bolder;
   color: white;
   margin-bottom: 0;
@@ -625,9 +658,15 @@ body #mesa #jarron {
   margin-top: -3px;
   margin-right: 10px;
 }
+#pie li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 #pie li .github {
-  font-size: 28px;
+  font-size: 27px;
 }
 #pie li .trello {
-  font-size: 22px;
+  font-size: 23px;
 }/*# sourceMappingURL=main.css.map */
