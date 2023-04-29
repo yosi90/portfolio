@@ -39,24 +39,6 @@ body
             padding-right: 15%
             padding-left: 15%
 
-#fondoTv
-    position: absolute
-    top: 60px
-    right: -10px
-
-    width: 90%
-    height: calc( 100vh - 6.5rem - 75px )
-    max-height: 750px
-
-    border-top-right-radius: 210px
-    border-bottom-right-radius: 90px 300px
-    border: 3px solid rgb(214, 214, 214)
-
-    background: rgb(250,250,250)
-    background: linear-gradient(90deg, rgba(250,250,250,1) 90%, rgba(165,165,165,1) 98%)
-
-    transform: rotate(-.5deg)
-
 #cuerpo
     display: grid
     grid-template: 1fr / 1fr 155px
@@ -355,6 +337,24 @@ body
 
 .canal
     @include canalBase
+
+#fondoTv
+    position: absolute
+    bottom: 17vh
+    left: 50%
+
+    width: 600px
+    height: calc( 100vh - 6.5rem - 75px )
+    max-height: 750px
+
+    border-top-right-radius: 210px
+    border-bottom-right-radius: 90px 300px
+    border: 3px solid rgb(214, 214, 214)
+
+    background: rgb(250,250,250)
+    background: linear-gradient(90deg, rgba(250,250,250,1) 90%, rgba(165,165,165,1) 98%)
+
+    transform: rotate(-.5deg)
 
 #pie
     height: 32px
